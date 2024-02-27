@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello from Dorami's BoT</title>
+</head>
+<body>
+  <h1>WEB読み込み画面</h1>
+  <form action = "/read_web/" method = "POST" >
+      <label for="">URL</label>
+      <input type="text" name="read_url" required>
+      <input type="submit" value="検索">
+      {% if error_message %}
+      <p style="color: red;">{{ error_message }}</p>
+      {% endif %}
+      <br><br>
+      <a href='/study'>戻る</a><br>
+      <a href="/logout">ログアウト</a><br>
+  </form>
+</body>
+</html>

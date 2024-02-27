@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Momikaru's Bot</title>
+</head>
+<body>
+  <h1>ユーザ登録</h1>
+  <form action = "/signup_user/" method="POST">
+    <p>お手数ですがお名前を教えてください</p>
+      <label for="">ユーザー名:</label>(半角で50文字以内でお願いします。)<br>
+      <input type="text" name="username" placeholder="お名前の登録お願いします" required><br>
+      <input type="submit" value="チャットに入る">
+      {% if error_message %}
+      <p style="color: red;">{{ error_message }}</p>
+      {% endif %}
+      <br><br>
+      <a href='/login'>スタッフルームはこちら</a>
+  </form>
+</body>
+</html>

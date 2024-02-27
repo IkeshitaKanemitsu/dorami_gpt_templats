@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello from Dorami's BoT</title>
+</head>
+<body>
+  <h1>会話履歴画面です!</h1>
+{% for c_log in c_logs %}
+<p>
+  {{ c_log.pub_date }}<br>
+  <!-- 質問者：{{ c_log.chat_user }}<br> -->
+  質問：{{ c_log.qry }}<br>
+  回答：{{ c_log.res }}<br><br>
+</p>
+  
+{% endfor %}
+<a href="/">ホーム</a><br>
+<a href="/logout">ログアウト</a><br>
+</body>
+</html>

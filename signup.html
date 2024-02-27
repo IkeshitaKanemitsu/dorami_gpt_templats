@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Momikaru's Bot</title>
+</head>
+<body>
+  <h1>スタッフ登録</h1>
+  <form action = "/signup/" method="POST">
+      <label for="">スタッフ名:</label>(半角で50文字以内でお願いします。)<br>
+      <input type="text" name="staffname" required><br>
+      <label for="">パスワード:</label>(半角で18文字以内でお願いします。)<br>
+      <input type="password" name="password" required><br>
+      <input type="submit" value="サインアップ">
+      {% if error_message %}
+      <p style="color: red;">{{ error_message }}</p>
+      {% endif %}
+      <br><br>
+      <a href='/login'>ログインはこちら</a>
+  </form>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="../static/chat.css" />
+    <title>Hello from Dorami's BoT</title>
+</head>
+<body>
+    <div class="page-content page-container" id="page-content">
+        <div class="padding">
+        <div class="row container d-flex justify-content-center">
+    <div class="col-md-4">
+
+    <div class="box box-warning direct-chat direct-chat-warning">
+      <div class="box-header with-border">
+        <h3 class="box-title">Chat Messages</h3>
+        <a href="/home">Home</a>
+                      <div class="box-footer">
+                        <form action="" method="POST">
+                          <div class="input-group">
+                            <input type="textarea" name="question" required minlength="3" maxlength="1000" size="90" placeholder="質問をどうぞ ..." class="form-control">
+                            <span class="input-group-btn">
+                              <input class="btn btn-warning btn-flat" type="submit" value="送信">
+                              </span>
+                          </div>
+                        </form>
+                      </div>
+    
+                      <div class="box-tools pull-right">
+                        <!-- <span data-toggle="tooltip" title="" class="badge bg-yellow" data-original-title="3 New Messages">20</span> -->
+                        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                        </button>
+                        <button type="button" class="btn btn-box-tool" data-toggle="tooltip" title="" data-widget="chat-pane-toggle" data-original-title="Contacts">
+                          <i class="fa fa-comments"></i></button>
+                        <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i>
+                        </button>
+                      </div>
+                    </div>
+
+                    <div class="direct-chat-messages">
+                         <div class="direct-chat-msg">
+                          <div class="direct-chat-info clearfix">
+                            <span class="direct-chat-name pull-left">
+                             {{ user.username }}さん
+                             </span>
+                            <span class="direct-chat-timestamp pull-right">{{ c_log.pub_date }}</span>
+                          </div>
+                         
+                          <img class="direct-chat-img" src="https://img.icons8.com/color/36/000000/administrator-male.png" alt="message user image">
+                       
+                          <div class="direct-chat-text">
+                            {{ c_log.qry }}
+                          </div>            
+                        </div>
+                        
+                        
+                        <div class="direct-chat-msg right">
+                          <div class="direct-chat-info clearfix">
+                            <span class="direct-chat-name pull-right">ドラミちゃん</span>
+                            <span class="direct-chat-timestamp pull-left">{{ c_log.pub_date }}</span>
+                          </div>
+                         
+                          <img class="direct-chat-img" src="https://img.icons8.com/office/36/000000/person-female.png" alt="message user image">
+                          
+                          <div class="direct-chat-text">
+                                {{ c_log.res }}
+                          </div>
+                        </div>
+                       
+                   
+
+                 
+                  </div>
+                </div>
+                </div>
+                 </div>
+                
+                  </div>
+                 
+                </div>
+</body>
+</html>
